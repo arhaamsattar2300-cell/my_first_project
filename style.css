@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #eef4ff, #d6e6ff);
+    color: #333
+}
+
+
+
+header {
+    background: blue;
+    background-size: 400% 400%;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+    
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    background-color: #0a3d62;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+
+nav a {
+    color: white;
+    margin: 0 16px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #aad4ff;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    animation: fadeUp 1.5s ease; 
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* hover animation */
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    color: #1e90ff;
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 34px;
+    background: linear-gradient(135deg, #1e90ff, #0a3d62);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: all 0.35s ease;
+}
+
+/* glowing hover */
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(30,144,255,0.8);
+}
+
+
+.blog {
+    background: white;
+    width: 70%;
+    margin: 60px auto;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    animation: blogSlide 1.2s ease; 
+}
+
+@keyframes blogSlide {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.blog h1 {
+    color: #1e90ff;
+}
+
+
+footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+}
+
+
+.section-image {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.section-image img {
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
